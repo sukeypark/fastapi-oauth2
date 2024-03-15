@@ -24,6 +24,9 @@ class User(BaseModel):
     role: str
 
 
+# TODO: token refresh / revoke / dhub data service broker에서 entity 가져오기
+
+
 @router.post("/token")
 def exchange_code_to_access_token(response: Response, params: OAuthCodeExchangeParams):
     headers = {"Content-type": "application/x-www-form-urlencoded"}
